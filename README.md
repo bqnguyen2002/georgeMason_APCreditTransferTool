@@ -9,7 +9,7 @@ A simple flask application incoming George Mason students can use to quickly cal
 
 2. Install Requirements  `pip install -r requirements.txt`
 
-3. To run the app on localhost run `python app.py`
+3. To run the app on localhost run `python GMU.py`
 
 4. app is running at `http://127.0.0.1:5000`
 
