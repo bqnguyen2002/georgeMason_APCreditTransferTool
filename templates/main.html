@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Search Box, Search Panel Like Amazon</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='container.css')}}"
+    />
+    <link rel="shortcut icon" href="#" />
+    <script src="{{ url_for('static', filename='main.js') }}">
+    </script>
+    <script>
+      const chart_data = {{ list|tojson }}
+  </script>
+  </head>
+  <body>
+    <h1>AP Credit Transfer Tool</h1>
+    <h2>Select which AP Courses you'd like to transfer</h2>
+    <nav>
+
+      <label for="touch"><span>ap exams</span></label>
+      <input type="checkbox" id="touch" />
+      <ul class="slide">
+        {% for item in exams %}
+        <li onclick="select(this)" id="exam_item"><a>{{item}}</a></li>
+        {% endfor %}
+        <a onclick="getScores()"
+          ><button class="button-23" role="button">Calculate</button></a
+        >
+        <p id="demo"></p>
+      </ul>
+    </nav>
+  </body>
+</html>
